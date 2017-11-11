@@ -40,6 +40,13 @@ public class MySavings extends MainActivity {
         months.add("August");
 
         BarData sexyData = new BarData(entriset);
+        mChart.setPinchZoom(false);
+        mChart.setDoubleTapToZoomEnabled(false);
+        mChart.setScaleEnabled(false);
+        mChart.setTouchEnabled(false);
+        mChart.setDrawBorders(false);
+        mChart.setEnabled(true);
+        mChart.setGridBackgroundColor(020040);
         mChart.setData(sexyData);
     }
 }
