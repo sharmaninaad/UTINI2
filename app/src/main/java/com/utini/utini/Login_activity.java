@@ -1,5 +1,6 @@
 package com.utini.utini;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -134,7 +135,9 @@ public class Login_activity extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d("SUCCESS", "signInWithEmail:success");
+                            Intent intent = new Intent(Login_activity.this, MainActivity.class);
                             FirebaseUser user = mAuth.getCurrentUser();
+                            startActivity(intent);
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w("FAILURE", "signInWithEmail:failure", task.getException());
