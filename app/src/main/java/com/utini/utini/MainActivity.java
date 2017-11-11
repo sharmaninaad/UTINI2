@@ -1,5 +1,6 @@
 package com.utini.utini;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -83,6 +84,8 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.saving) {
             // Handle the camera action
+            Intent intent=new Intent(MainActivity.this, MySavings.class);
+            startActivity(intent);
         } else if (id == R.id.product) {
 
         } else if (id == R.id.monthly) {
